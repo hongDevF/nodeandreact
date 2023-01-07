@@ -3,7 +3,6 @@ const app = express();
 
 const userRoute = require('./routes/userRoutes')
 
-
 const bodyParser = require("body-parser");
 const mysql = require("mysql2");
 app.use(bodyParser.json());
@@ -47,6 +46,11 @@ app.delete("/user/:id", (req, res) => {
     }
   );
 });
+
+
+app.post('/user', (req, res)=>{
+  // mySqlConnection.query("INSERT INTO crud_user)")
+})
 // app.post('/add', (req, res)=>{
 //     let user = req.body;
 //     var sql = "SET @id= ?; SET @name= ?; SET @email= ? ; SET @contact = ? "
